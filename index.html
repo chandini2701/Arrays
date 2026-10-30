@@ -1,0 +1,492 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Arrays in Java | Learning Hub</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+  </head>
+  <body>
+    <header>
+      <nav class="navbar">
+        <a href="#home" class="logo">Java<span>Arrays.</span></a>
+        <div class="nav-links">
+          <a href="#home">Home</a>
+          <a href="#intro">Introduction</a>
+          <a href="#types">Types</a>
+          <a href="#operations">Operations</a>
+          <a href="#examples">Examples</a>
+          <a href="#quiz">Quiz</a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- HERO -->
+    <section class="hero" id="home">
+      <div class="hero-content">
+        <span class="tag">JAVA PROGRAMMING CONCEPT</span>
+        <h1>Understand <span>Arrays</span><br />in Java</h1>
+        <p>
+          Learn how to store, access, update and manage multiple values using a
+          single variable. Explore Java array concepts with examples and
+          interactive demonstrations.
+        </p>
+        <div class="hero-buttons">
+          <a href="#intro" class="btn primary"
+            >Start Learning <i class="fa-solid fa-arrow-right"></i
+          ></a>
+          <a href="#examples" class="btn secondary">View Examples</a>
+        </div>
+        <div class="hero-stats">
+          <div>
+            <h3>01</h3>
+            <p>Introduction</p>
+          </div>
+          <div>
+            <h3>02</h3>
+            <p>Array Types</p>
+          </div>
+          <div>
+            <h3>03</h3>
+            <p>Java Programs</p>
+          </div>
+        </div>
+      </div>
+
+      <div class="array-visual">
+        <div class="visual-title">INTEGER ARRAY</div>
+        <div class="array-cells">
+          <div class="cell"><span>0</span><strong>10</strong></div>
+          <div class="cell"><span>1</span><strong>20</strong></div>
+          <div class="cell"><span>2</span><strong>30</strong></div>
+          <div class="cell"><span>3</span><strong>40</strong></div>
+          <div class="cell"><span>4</span><strong>50</strong></div>
+        </div>
+        <p class="visual-note">Index starts from 0</p>
+        <div class="memory-label">
+          Same data type · Continuous indexed storage
+        </div>
+      </div>
+    </section>
+
+    <!-- INTRODUCTION -->
+    <section class="section" id="intro">
+      <div class="section-heading">
+        <span class="tag">01 / BASICS</span>
+        <h2>What is an <span>Array?</span></h2>
+        <p>Understand the foundation of arrays in Java.</p>
+      </div>
+
+      <div class="intro-grid">
+        <div class="info-card">
+          <i class="fa-solid fa-layer-group card-icon"></i>
+          <h3>Definition</h3>
+          <p>
+            An array in Java is a collection of elements of the same data type
+            stored under a single variable name. Each element is accessed using
+            its index position.
+          </p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-list-ol card-icon"></i>
+          <h3>Indexing</h3>
+          <p>
+            Array indexing starts from 0. The first element is at index 0, the
+            second at index 1, and the last element is at length - 1.
+          </p>
+        </div>
+        <div class="info-card">
+          <i class="fa-solid fa-database card-icon"></i>
+          <h3>Fixed Size</h3>
+          <p>
+            Once an array is created, its length cannot be changed. The size
+            must be specified when creating the array.
+          </p>
+        </div>
+      </div>
+
+      <div class="code-panel">
+        <div class="code-header">
+          <span>Java - Array Declaration</span>
+          <span class="language">JAVA</span>
+        </div>
+        <pre><code>int[] numbers = new int[5];
+
+numbers[0] = 10;
+numbers[1] = 20;
+numbers[2] = 30;
+numbers[3] = 40;
+numbers[4] = 50;
+
+System.out.println(numbers[0]); // 10</code></pre>
+      </div>
+    </section>
+
+    <!-- WHY ARRAYS -->
+    <section class="section alt-section">
+      <div class="section-heading">
+        <span class="tag">02 / IMPORTANCE</span>
+        <h2>Why do we use <span>Arrays?</span></h2>
+        <p>Arrays make handling multiple values easier.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature">
+          <i class="fa-solid fa-boxes-stacked"></i>
+          <h3>Multiple Values</h3>
+          <p>Store many values using one variable.</p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-bolt"></i>
+          <h3>Fast Access</h3>
+          <p>Access elements directly through their indexes.</p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-code"></i>
+          <h3>Easy Traversal</h3>
+          <p>Use loops to process all elements easily.</p>
+        </div>
+        <div class="feature">
+          <i class="fa-solid fa-sitemap"></i>
+          <h3>Organized Data</h3>
+          <p>Keep related values together in a structured way.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- TYPES -->
+    <section class="section" id="types">
+      <div class="section-heading">
+        <span class="tag">03 / CLASSIFICATION</span>
+        <h2>Types of <span>Arrays</span></h2>
+        <p>Java mainly supports these array structures.</p>
+      </div>
+
+      <div class="type-grid">
+        <div class="type-card">
+          <span class="number">01</span>
+          <h3>One-Dimensional Array</h3>
+          <p>Stores elements in a single row or linear sequence.</p>
+          <div class="mini-array">
+            <span>10</span><span>20</span><span>30</span><span>40</span>
+          </div>
+          <pre><code>int[] a = {10, 20, 30, 40};</code></pre>
+        </div>
+
+        <div class="type-card">
+          <span class="number">02</span>
+          <h3>Two-Dimensional Array</h3>
+          <p>Stores elements in rows and columns, like a matrix.</p>
+          <div class="matrix">
+            <span>10</span><span>20</span> <span>30</span><span>40</span>
+          </div>
+          <pre><code>int[][] a = {
+    {10, 20},
+    {30, 40}
+};</code></pre>
+        </div>
+
+        <div class="type-card">
+          <span class="number">03</span>
+          <h3>Multidimensional Array</h3>
+          <p>An array containing two or more dimensions, such as a 3D array.</p>
+          <div class="multi-icon">
+            <i class="fa-solid fa-cubes-stacked"></i>
+          </div>
+          <pre><code>int[][][] a =
+    new int[2][3][4];</code></pre>
+        </div>
+      </div>
+    </section>
+
+    <!-- OPERATIONS -->
+    <section class="section alt-section" id="operations">
+      <div class="section-heading">
+        <span class="tag">04 / WORKING</span>
+        <h2>Array <span>Operations</span></h2>
+        <p>Important operations performed on Java arrays.</p>
+      </div>
+
+      <div class="operation-list">
+        <div class="operation">
+          <div class="op-number">01</div>
+          <div>
+            <h3>Declaration</h3>
+            <p>Define an array variable.</p>
+            <code>int[] numbers;</code>
+          </div>
+        </div>
+        <div class="operation">
+          <div class="op-number">02</div>
+          <div>
+            <h3>Creation</h3>
+            <p>Allocate memory for the array.</p>
+            <code>numbers = new int[5];</code>
+          </div>
+        </div>
+        <div class="operation">
+          <div class="op-number">03</div>
+          <div>
+            <h3>Initialization</h3>
+            <p>Assign values to array elements.</p>
+            <code>int[] a = {10, 20, 30};</code>
+          </div>
+        </div>
+        <div class="operation">
+          <div class="op-number">04</div>
+          <div>
+            <h3>Accessing</h3>
+            <p>Read an element using its index.</p>
+            <code>System.out.println(a[0]);</code>
+          </div>
+        </div>
+        <div class="operation">
+          <div class="op-number">05</div>
+          <div>
+            <h3>Updating</h3>
+            <p>Change the value of an existing element.</p>
+            <code>a[1] = 100;</code>
+          </div>
+        </div>
+        <div class="operation">
+          <div class="op-number">06</div>
+          <div>
+            <h3>Traversal</h3>
+            <p>Visit every element using a loop.</p>
+            <code>for(int i = 0; i &lt; a.length; i++)</code>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXAMPLES -->
+    <section class="section" id="examples">
+      <div class="section-heading">
+        <span class="tag">05 / JAVA PROGRAMS</span>
+        <h2>Practical <span>Examples</span></h2>
+        <p>Learn important array programs with Java code.</p>
+      </div>
+
+      <div class="example-grid">
+        <div class="example-card">
+          <h3>Example 1: Print Array Elements</h3>
+          <p>Use a for loop to print all array values.</p>
+          <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] a = {10, 20, 30, 40, 50};
+
+        for(int i = 0; i &lt; a.length; i++) {
+            System.out.println(a[i]);
+        }
+    }
+}</code></pre>
+          <div class="output">Output: 10 20 30 40 50</div>
+        </div>
+
+        <div class="example-card">
+          <h3>Example 2: Find Sum</h3>
+          <p>Add all elements present in an array.</p>
+          <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] a = {10, 20, 30, 40};
+        int sum = 0;
+
+        for(int i = 0; i &lt; a.length; i++) {
+            sum = sum + a[i];
+        }
+
+        System.out.println(sum);
+    }
+}</code></pre>
+          <div class="output">Output: 100</div>
+        </div>
+
+        <div class="example-card">
+          <h3>Example 3: Find Largest Element</h3>
+          <p>Find the maximum value in an array.</p>
+          <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] a = {12, 45, 23, 67, 34};
+        int max = a[0];
+
+        for(int i = 1; i &lt; a.length; i++) {
+            if(a[i] &gt; max) {
+                max = a[i];
+            }
+        }
+
+        System.out.println(max);
+    }
+}</code></pre>
+          <div class="output">Output: 67</div>
+        </div>
+
+        <div class="example-card">
+          <h3>Example 4: Reverse an Array</h3>
+          <p>Print the elements in reverse order.</p>
+          <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] a = {10, 20, 30, 40, 50};
+
+        for(int i = a.length - 1; i &gt;= 0; i--) {
+            System.out.print(a[i] + " ");
+        }
+    }
+}</code></pre>
+          <div class="output">Output: 50 40 30 20 10</div>
+        </div>
+
+        <div class="example-card">
+          <h3>Example 5: Two-Dimensional Array</h3>
+          <p>Print matrix elements using nested loops.</p>
+          <pre><code>class Main {
+    public static void main(String[] args) {
+        int[][] a = {
+            {10, 20},
+            {30, 40}
+        };
+
+        for(int i = 0; i &lt; a.length; i++) {
+            for(int j = 0; j &lt; a[i].length; j++) {
+                System.out.print(a[i][j] + " ");
+            }
+            System.out.println();
+        }
+    }
+}</code></pre>
+          <div class="output">Output:<br />10 20<br />30 40</div>
+        </div>
+
+        <div class="example-card">
+          <h3>Example 6: Search an Element</h3>
+          <p>Find whether a particular value exists.</p>
+          <pre><code>class Main {
+    public static void main(String[] args) {
+        int[] a = {10, 20, 30, 40};
+        int search = 30;
+        boolean found = false;
+
+        for(int i = 0; i &lt; a.length; i++) {
+            if(a[i] == search) {
+                found = true;
+                break;
+            }
+        }
+
+        System.out.println(found);
+    }
+}</code></pre>
+          <div class="output">Output: true</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- INTERACTIVE DEMO -->
+    <section class="section alt-section" id="playground">
+      <div class="section-heading">
+        <span class="tag">06 / INTERACTIVE LEARNING</span>
+        <h2>Array <span>Playground</span></h2>
+        <p>Enter your own values and see how Java array indexes work.</p>
+      </div>
+
+      <div class="playground">
+        <label for="arrayInput">Enter numbers separated by commas</label>
+        <input type="text" id="arrayInput" value="10,20,30,40,50" />
+        <button class="btn primary" onclick="createArray()">
+          Create Array
+        </button>
+
+        <div id="arrayOutput" class="array-output">
+          <p>Your array will appear here.</p>
+        </div>
+
+        <div class="demo-actions">
+          <div>
+            <label for="indexInput">Enter index</label>
+            <input
+              type="number"
+              id="indexInput"
+              min="0"
+              placeholder="Example: 2"
+            />
+          </div>
+          <button class="btn secondary" onclick="accessElement()">
+            Access Element
+          </button>
+        </div>
+        <div id="result" class="result">Result will appear here.</div>
+      </div>
+    </section>
+
+    <!-- ADVANTAGES -->
+    <section class="section">
+      <div class="section-heading">
+        <span class="tag">07 / SUMMARY</span>
+        <h2>Advantages & <span>Limitations</span></h2>
+      </div>
+
+      <div class="pros-cons">
+        <div class="pros">
+          <h3><i class="fa-solid fa-circle-check"></i> Advantages</h3>
+          <ul>
+            <li>Stores multiple values under one name.</li>
+            <li>Provides direct access using indexes.</li>
+            <li>Easy to traverse using loops.</li>
+            <li>Useful for storing similar types of data.</li>
+            <li>Supports one-dimensional and multidimensional structures.</li>
+          </ul>
+        </div>
+        <div class="cons">
+          <h3><i class="fa-solid fa-circle-exclamation"></i> Limitations</h3>
+          <ul>
+            <li>Fixed size after creation.</li>
+            <li>Stores elements of one declared component type.</li>
+            <li>Insertion and deletion may require shifting elements.</li>
+            <li>Invalid indexes cause ArrayIndexOutOfBoundsException.</li>
+            <li>
+              Resizing requires creating another array or using a dynamic
+              collection.
+            </li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUIZ -->
+    <section class="section alt-section" id="quiz">
+      <div class="section-heading">
+        <span class="tag">08 / TEST YOUR KNOWLEDGE</span>
+        <h2>Java Arrays <span>Quiz</span></h2>
+        <p>Check how well you understand arrays.</p>
+      </div>
+
+      <div class="quiz-box">
+        <h3 id="question">Question will appear here</h3>
+        <div id="options" class="options"></div>
+        <p id="quizResult"></p>
+        <button class="btn primary" id="nextButton" onclick="nextQuestion()">
+          Next Question
+        </button>
+        <p id="score"></p>
+      </div>
+    </section>
+
+    <footer>
+      <h2>Java<span>Arrays.</span></h2>
+      <p>Learn. Practice. Understand. Grow.</p>
+      <p class="copyright">
+        © 2026 Java Arrays Learning Hub. All Rights Reserved.
+      </p>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
